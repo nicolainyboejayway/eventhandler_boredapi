@@ -104,6 +104,11 @@ export default function Bored() {
     setAccessibility(Object.values(items)[6]);
     setType(Object.values(items)[1]);
   }, [items]);
+  console.log(isLoaded);
+
+  if (isLoaded !== false) {
+    return <div>Error: Couldn't load see error</div>;
+  }
 
   return (
     <div>
